@@ -10,5 +10,10 @@ fun main(args:Array<String>) {
         jeu.jouer()
     }
 
+    println("============ CLASSEMENT ====================");
+    for  (joueur in jeu.getJoueurs()) {
+        println("Joueur ${joueur.getNom()} avec la fortune ${joueur.getFortune()}")
+    }
+    println("=============================================");
 }
 

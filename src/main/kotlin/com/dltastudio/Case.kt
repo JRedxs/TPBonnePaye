@@ -1,6 +1,6 @@
 package com.dltastudio
 
-class Case(private val nom : String) {
+open class Case(private val nom : String) {
     private lateinit var caseSuivante: Case
 
     fun getNom() : String {
@@ -13,5 +13,9 @@ class Case(private val nom : String) {
 
     fun setCaseSuivante(caseSuivante : Case) {
         this.caseSuivante = caseSuivante
+    }
+
+    open fun arretSur(joueur: Joueur){
+
     }
 }

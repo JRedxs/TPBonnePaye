@@ -23,4 +23,8 @@ class LaBonnePaye {
             joueur.jouer(gobelet)
         }
     }
+
+    fun getJoueurs() : List<Joueur> {
+        return lesJoueurs
+    }
 }

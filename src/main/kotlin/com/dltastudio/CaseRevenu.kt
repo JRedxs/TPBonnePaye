@@ -1,12 +1,17 @@
 package com.dltastudio
 
-open class CaseRevenu {
+open class CaseRevenu : Case{
 
     private val montant: Int
 
-    constructor(montant: Int){
-        this.montant = montant
+     constructor(nom : String, montant : Int) : super(nom) {
+         this.montant = montant
+     }
+
+    override fun arretSur(joueur: Joueur) {
+        joueur.setFortune(joueur.getFortune()+montant)
     }
+
 
 
 }

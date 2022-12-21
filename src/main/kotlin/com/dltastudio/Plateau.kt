@@ -15,7 +15,17 @@ class Plateau {
         for (i in 1..31) {
             val nomCase = "Case ${i}"
 
-            newCase=Case(nomCase)
+            newCase = when (i) {
+                5 -> CaseDimanche()
+
+                10,15,20,25 -> CaseDette(nomCase,(10*i))
+
+                8,13,21,24,27 -> CaseRevenu(nomCase,(10*i))
+
+                else -> Case(nomCase)
+
+            }
+
             lesCases.add(newCase)
             previousCase?.let {
                 it.setCaseSuivante(newCase)
