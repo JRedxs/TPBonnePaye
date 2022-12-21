@@ -1,6 +1,6 @@
 package com.dltastudio
 
-class CaseRevenu {
+open class CaseRevenu {
 
     private val montant: Int
 

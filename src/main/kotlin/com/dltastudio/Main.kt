@@ -4,17 +4,11 @@ import java.util.*
 
 fun main(args:Array<String>) {
 
+    val jeu = LaBonnePaye()
 
-    var indice = 0
-    val laBonnePaye = LaBonnePaye()
-    var tour = 1
-    do{
-        println("Tour $tour")
-        laBonnePaye.tabJoueur.forEach { joueur -> joueur.Jouer() }
-        tour +=1
-        indice += 1
-    }while(indice < 20)
-
-
+    for (i in 1..20) {
+        jeu.jouer()
+    }
 
 }
+

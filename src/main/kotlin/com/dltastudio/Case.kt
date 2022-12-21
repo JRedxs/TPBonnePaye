@@ -1,21 +1,17 @@
 package com.dltastudio
 
-class Case{
+class Case(private val nom : String) {
+    private lateinit var caseSuivante: Case
 
-    private val nom: Int
-    val arr = Array(31) { i -> (1 * i+1) }
-
-    constructor(NewCase: Int){
-        this.nom = NewCase
-    }
-
-    fun getNom(): Int{
+    fun getNom() : String {
         return nom
     }
 
-    fun arretSur(){
-
-        val joueur = Joueur("","",650,true)
+    fun getCaseSuivante() : Case {
+        return caseSuivante
     }
 
+    fun setCaseSuivante(caseSuivante : Case) {
+        this.caseSuivante = caseSuivante
+    }
 }
